@@ -31,7 +31,7 @@
 					<a class="nav-link" href="../frontend/eventManage.php">Events</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="galleryManage.php">Gallery</a>
+					<a class="nav-link" href="gallery.php">Gallery</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="../backend/contact.php">Feedback</a>
