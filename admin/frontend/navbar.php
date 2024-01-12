@@ -28,7 +28,7 @@
 					<a class="nav-link" href="../backend/verify.php">Verify</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../backend/events.php">Events</a>
+					<a class="nav-link" href="../frontend/eventManage.php">Events</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="galleryManage.php">Gallery</a>
