@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.headLine {
+    font-size: 40px;
+    font-weight: bold;
+    color: #c55e76;
+    margin: 20px 0px;
+}
+
+.navbar-clr {
+    background-color: #d20452;
+    color: white;
+}
+
+.btn-danger1 {
+    background-color: #ff5050;
+    border: 2px solid #ff5050;
+    color: black;
+}
+
+.btn-info1 {
+    background-color: #17a2b8;
+    border: 2px solid #17a2b8;
+    color: black;
+}
+
+.btn-danger1:hover {
+    opacity: 0.9;
+}
+
+.btn-info1:hover {
+    opacity: 0.9;
+}
