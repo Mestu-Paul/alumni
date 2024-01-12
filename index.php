@@ -1,4 +1,3 @@
 <?php 
-// header("Location: user/frontend/index.php");
-echo 'under construction';
+header("Location: user/frontend/index.php");
 ?>
