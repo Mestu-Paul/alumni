@@ -33,7 +33,7 @@
         </form>
     </div>
   </div>
-  <?php include '../../user/frontend/footer.php'; ?>
+  <?php include '../../common/footer.php'; ?>
 </body>
 
 </html>
