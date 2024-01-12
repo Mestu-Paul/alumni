@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Alumni Registration</title>
-  
+  <title>Contacts</title>
   <?php include '../../common/headRef.php'; ?>
 </head>
 

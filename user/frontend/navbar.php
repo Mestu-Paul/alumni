@@ -41,7 +41,7 @@
 				</li>
 				<?php if(isset($_SESSION["user_email"])) { 
 						echo '<li class="nav-item">
-							<a class="nav-link text-dark fw-bold" href="../backend/logout.php">Logout</a>
+							<a class="nav-link text-dark fw-bold" href="../../common/logout.php">Logout</a>
 						</li>';
 					} 
 					else {
