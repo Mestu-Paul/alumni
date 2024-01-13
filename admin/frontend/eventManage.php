@@ -46,9 +46,9 @@
         </div>
         <div class="mb-3">
           <label for="description" class="form-label fw-bold">Description :</label>
-          <textarea type="time" class="col form-control" name="description" id="description" aria-describedby="description">
-          <?php if(isset($_SESSION['event']))$_SESSION['event']['description'] ?>
-          </textarea>
+          <textarea type="time" class="col form-control" name="description" id="description" aria-describedby="description"
+          ><?php if(isset($_SESSION['event']))$_SESSION['event']['description'] 
+          ?></textarea>
         </div>
         <div class="text-center mt-3">
           <button type="submit" class="btn btn-info">Add</button>
