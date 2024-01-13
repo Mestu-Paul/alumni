@@ -37,6 +37,9 @@
 					<a class="nav-link" href="events.php">Events</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="job.php">Job</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="gallery.php">Gallery</a>
 				</li>
 				<?php if(isset($_SESSION["user_email"])) { 
@@ -77,6 +80,17 @@
 							Login</a>';
 					}?>
 				</li>
+				<?php
+					if(isset($_SESSION["user_email"]) && isset($_SESSION["user_role"])=='admin'){
+						echo '
+						<li class="nav-item">
+						<a class="nav-link" aria-current="page" title="logout" href="../../admin/frontend/index.php">
+							<span class="text-light"/>GoTo Admin</span>
+						</a>
+						</li>';
+					}
+				?>
+				
 			</ul>
 		</div>
 	</div>

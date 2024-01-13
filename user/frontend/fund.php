@@ -58,7 +58,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Alumni Nmae</th>
+              <th scope="col">Alumni Name</th>
               <th scope="col">Payment date</th>
               <th scope="col">Type</th>
               <th scope="col">Bank</th>
@@ -68,7 +68,6 @@
           </thead>
           <tbody>
             <?php
-            if (isset($_SESSION['events'])) {
               $i = 1;
               foreach ($funds as $fund) {
                 echo '<tr>
@@ -81,7 +80,6 @@
               <td>' . $fund['amount'] . '</td>
               ';
               }
-            }
             ?>
         </tbody>
       </table>
