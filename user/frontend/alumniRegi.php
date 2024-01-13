@@ -12,7 +12,7 @@
     <div class="py-2 pb-5">
       <div class="card mx-auto mt-5 py-3" style="width:35rem; box-shadow:0px 0px 10px 2px #919191;">
         <h5 class="card-title text-center  headLine">Alumni Registration</h5>
-        <form action="backend/alumniRegi.php" enctype="multipart/form-data" method="post" class="mx-auto"
+        <form action="../backend/alumniRegi.php" enctype="multipart/form-data" method="post" class="mx-auto"
           style="width: 70%;">
           <div class="mb-3">
             <label for="fullName" class="form-label">Full Name :</label>
