@@ -37,12 +37,12 @@
 					<a class="nav-link" href="../backend/contact.php">Feedback</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">My account</a>
+					<a class="nav-link" href="profile.php">My account</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" aria-current="page" title="logout" href="../backend/logout.php">
+					<a class="nav-link" aria-current="page" title="logout" href="../../common/logout.php">
 						<?php echo $_SESSION['user_email']; ?> <br>
 						<span class="text-danger"/>Logout</span>
 					</a>

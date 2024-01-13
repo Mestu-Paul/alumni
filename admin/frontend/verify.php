@@ -19,7 +19,7 @@
 
 <body>
   <?php include 'navbar.php'; ?>
-  <div class="container bg-light" style="min-height:100vh">
+  <div class="container-fluid" style="min-height:100vh">
     <div class="py-2 pb-5">
       <div class="mx-auto" style="width: 70%;">
         <p class="text-center mt-5 headLine">Alumni Verify</p>
