@@ -62,6 +62,7 @@
               <th scope="col">Bank</th>
               <th scope="col">Remarks</th>
               <th scope="col">Amount</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -75,9 +76,14 @@
               <td>' . $fund['type'] . '</td>
               <td>' . $fund['bank'] . '</td>
               <td>' . $fund['remarks'] . '</td>
-              <td>' . $fund['amount'] . '</td>
-              ';
+              <td>' . $fund['amount'] . '</td>';
+              if($fund['valid'])
+                echo '<td><a class="btn btn-info" href="../backend/fundUpdate.php?type=0&id='.$fund["id"].'">Revert</a></td>';
+              else{
+                echo '<td><a class="btn btn-info me-2" href="../backend/fundUpdate.php?type=1&id='.$fund["id"].'">Valid</a>';
+                echo '<a class="btn btn-danger" href="../backend/fundUpdate.php?type=2&id='.$fund["id"].'">Delete</a></td>';
               }
+            }
             ?>
         </tbody>
       </table>
