@@ -19,7 +19,7 @@
             <input type="text" class="col form-control" name="fullName" id="fullName" aria-describedby="fullName">
           </div>
           <div class="mb-3">
-            <label for="profilePicture" class="form-label">Profile picture :</label>
+            <label for="profilePicture" class="form-label">Student ID photo :</label>
             <input type="file" class="col form-control" name="profilePicture" id="profilePicture"
               aria-describedby="profilePicture">
           </div>

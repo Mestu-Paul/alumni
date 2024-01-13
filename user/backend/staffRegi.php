@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = $_POST['email']; // text
   $password = $_POST['password']; // text
   $confirmPassword = $_POST['confirmPassword']; // text
+  $role = "staff";
 
   if (
     empty($fullName) || empty($dateOfBirth) ||
@@ -50,27 +51,16 @@ $db = connect();
   
   // create user account
   // Prepare the SQL query to insert into the User table.
-  $sql = 'INSERT INTO User (email, password) VALUES (:email, :password)';
+  $sql = 'INSERT INTO User (email, password, name, role) VALUES (:email1, :password1, :name1, :role1);
+  INSERT INTO staff (Full_Name, photo, Date_of_Birth, Contact_No, Designation, Occupation) 
+      VALUES (:Full_Name, :photo, :Date_of_Birth, :Contact_No, :Designation, :Occupation);';
   $stmt = $db->prepare($sql);
 
-  $stmt->bindParam(':email', $email);
-  $stmt->bindParam(':password', $password);
-
-  // Execute the query to insert user data.
-  $stmt->execute();
-
-  // Get the last inserted user ID
-  $userId = $db->lastInsertId();
+  $stmt->bindParam(':email1', $email);
+  $stmt->bindParam(':password1', $password);
+  $stmt->bindParam(':name1', $fullName);
+  $stmt->bindParam(':role1', $role);
   
-
-  // create user details 
-  
-  $sql = 'INSERT INTO staff (UserId, Full_Name, photo, Date_of_Birth, Contact_No, Designation, Occupation) 
-      VALUES (:UserId, :Full_Name, :photo, :Date_of_Birth, :Contact_No, :Designation, :Occupation)';
-  $stmt = $db->prepare($sql);
-
-  // Bind parameters with the data
-  $stmt->bindParam(':UserId', $userId);
   $stmt->bindParam(':Full_Name', $fullName);
   $stmt->bindParam(':photo', $photo);
   $stmt->bindParam(':Date_of_Birth', $dateOfBirth);

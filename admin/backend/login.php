@@ -28,11 +28,12 @@
     }
     else if($users[0]['role']!=='admin'){
       $_SESSION["message"] = 'Not permitted';
-      header("Location: ../frontend/login.php");
+      header("Location: ../../user/frontend/index.php");
     }
     else{
       $_SESSION["user_role"] = $users[0]['role'];
       $_SESSION["user_email"] = $users[0]['email'];
+      $_SESSION["user_name"] = $users[0]['name'];
       header("Location: ../frontend/index.php");
     }
   }

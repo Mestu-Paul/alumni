@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = $_POST['email']; // text
   $password = $_POST['password']; // text
   $confirmPassword = $_POST['confirmPassword']; // text
+  $role = "alumni";
 
   if (
     empty($fullName) || empty($dateOfBirth) ||
@@ -49,27 +50,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // create user account
   // Prepare the SQL query to insert into the User table.
-  $sql = 'INSERT INTO User (email, password) VALUES (:email, :password)';
+  $sql = 'INSERT INTO User (email, password, role, name) VALUES (:email1, :password1, :role1, :name1);
+          INSERT INTO alumni (Full_Name, Profile_Picture, Date_of_Birth, Contact_No, Session, Department, Occupation, email) 
+          VALUES (:Full_Name, :Profile_Picture, :Date_of_Birth, :Contact_No, :Session, :Department, :Occupation, :email)';
   $stmt = $db->prepare($sql);
 
-  $stmt->bindParam(':email', $email);
-  $stmt->bindParam(':password', $password);
+  $stmt->bindParam(':email1', $email);
+  $stmt->bindParam(':password1', $password);
+  $stmt->bindParam(':name1', $fullName);
+  $stmt->bindParam(':role1',$role);
 
-  // Execute the query to insert user data.
-  $stmt->execute();
-
-  // Get the last inserted user ID
-  $userId = $db->lastInsertId();
-
-
-  // create user details 
-
-  $sql = 'INSERT INTO alumni (UserId, Full_Name, Profile_Picture, Date_of_Birth, Contact_No, Session, Department, Occupation) 
-      VALUES (:UserId, :Full_Name, :Profile_Picture, :Date_of_Birth, :Contact_No, :Session, :Department, :Occupation)';
-  $stmt = $db->prepare($sql);
-
-  // Bind parameters with the data
-  $stmt->bindParam(':UserId', $userId);
   $stmt->bindParam(':Full_Name', $fullName);
   $stmt->bindParam(':Profile_Picture', $profilePicture);
   $stmt->bindParam(':Date_of_Birth', $dateOfBirth);
@@ -77,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt->bindParam(':Session', $sessionYear);
   $stmt->bindParam(':Department', $department);
   $stmt->bindParam(':Occupation', $occupation);
+  $stmt->bindParam(':email', $email);
 
   // Execute the query to insert alumni data.
   $stmt->execute();

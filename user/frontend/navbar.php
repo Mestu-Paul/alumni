@@ -62,12 +62,15 @@
 				<li class="nav-item">
 					<a class="nav-link" href="contact.php">Contact</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="fund.php">Fund</a>
+				</li>
 				
 			</ul>
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<?php if(isset($_SESSION["user_email"])) { 
-						echo '<a class="nav-link" aria-current="page" href="#">'.$_SESSION["user_email"].'</a>';
+						echo '<a class="nav-link" aria-current="page" href="#">'.$_SESSION["user_name"].'</a>';
 					} 
 					else { 
 						echo '<a class="nav-link" aria-current="page" href="../../admin/frontend/login.php">Admin

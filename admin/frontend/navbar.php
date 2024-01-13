@@ -1,11 +1,4 @@
-<?php
-  if(session_status() !== PHP_SESSION_ACTIVE)
-    session_start();
-  if(!isset($_SESSION["user_email"]) || (isset($_SESSION["user_email"]) && $_SESSION["user_role"] !== "admin")){
-    $_SESSION['message']="Not Permitted";
-    header("Location: ../../user/frontend/index.php");
-  }
-?>
+<?php include '../../common/adminPermition.php' ?>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #03aea8">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.php">Alumni Management System</a>
@@ -35,6 +28,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="../backend/contact.php">Feedback</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../frontend/fund.php">Fund</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="profile.php">My account</a>

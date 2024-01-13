@@ -27,9 +27,9 @@ include_once '../../conn.php';
         header("Location: ../frontend/login.php");
     }
     else{
-      $_SESSION["message"] = $users[0]['logged in'];
       $_SESSION["user_role"] = $users[0]['role'];
       $_SESSION["user_email"] = $users[0]['email'];
+      $_SESSION["user_name"] = $users[0]['name'];
       header("Location: ../frontend/index.php");
     }
   }
