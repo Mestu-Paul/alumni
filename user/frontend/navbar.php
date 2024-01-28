@@ -84,7 +84,7 @@
 					if(isset($_SESSION["user_email"]) && isset($_SESSION["user_role"])=='admin'){
 						echo '
 						<li class="nav-item">
-						<a class="nav-link" aria-current="page" title="logout" href="../../admin/frontend/index.php">
+						<a class="nav-link" aria-current="page" href="../../admin/frontend/index.php">
 							<span class="text-light"/>GoTo Admin</span>
 						</a>
 						</li>';

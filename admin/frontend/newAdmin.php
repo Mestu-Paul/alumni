@@ -49,7 +49,7 @@ if (!isset($_SESSION["user_email"]) || (isset($_SESSION["user_email"]) && $_SESS
         <th>Action</th>
       </tr>
       <?php 
-      include '../backend/getAdmins';
+      include '../backend/getAdmins.php';
       foreach($admins as $admin){
         echo '<tr>
         <td>'.$admin['email'].'</td>';
