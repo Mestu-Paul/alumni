@@ -2,18 +2,29 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .headLine {
     font-size: 40px;
     font-weight: bold;
-    color: #c55e76;
+    color: black;
     margin: 20px 0px;
 }
 
 .navbar-clr {
-    background-color: #d20452;
-    color: white;
+    background-color: #00b2ff;
+}
+
+.nav-link.active{
+    background-color: #0182b9;
+    color: black;
+}
+
+.nav-link:hover{
+    background-color: #0182b9;
+    color: black;
+    border-radius: 10px;
 }
 
 .btn-danger1 {
@@ -34,4 +45,8 @@ body {
 
 .btn-info1:hover {
     opacity: 0.9;
+}
+
+a{
+    text-decoration: none;
 }

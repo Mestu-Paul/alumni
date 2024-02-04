@@ -2,13 +2,14 @@
     session_start(); ?>
 <head>
 	<style>
-		.navbar-clr{
-			background-color: #d00e78;
-		c:\xampp\htdocs\alumni1\user\frontend\index.php	color:white;
-		}
+		/* .navbar-clr{
+			background-color: #00b2ff;
+		} */
 		.navbar-brand{
 			color:white;
-			margin-left: 20px;
+			margin-left: 2px;
+			font-size: 25px;
+			font-weight: bold;
 		}
 		.navbar-clr a{
 			color:#f1f1f1;
@@ -28,19 +29,19 @@
 		<div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" aria-current="page" href="index.php">Home</a>
+					<a class="nav-link" aria-current="page" href="index.php">HOME</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="about.php">About</a>
+					<a class="nav-link" href="events.php">EVENTS</a>
 				</li>
+				<?php if(isset($_SESSION["user_email"])) { 
+					echo '
 				<li class="nav-item">
-					<a class="nav-link" href="events.php">Events</a>
-				</li>
+					<a class="nav-link" href="job.php">JOB</a>
+				</li>';
+				} ?>
 				<li class="nav-item">
-					<a class="nav-link" href="job.php">Job</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="gallery.php">Gallery</a>
+					<a class="nav-link" href="gallery.php">GALLERY</a>
 				</li>
 				<?php if(isset($_SESSION["user_email"])) { 
 						echo '<li class="nav-item">
@@ -49,24 +50,26 @@
 					} 
 					else {
 						echo '<li class="nav-item">
-							<a class="nav-link" href="login.php">Login</a>
+							<a class="nav-link" href="login.php">LOGIN</a>
 						</li>';
 					}
 				?>
 				<?php if(!isset($_SESSION["user_email"])) { 
 						echo '<li class="nav-item">
-								<a class="nav-link" href="alumniRegi.php">New Alumni</a>
+								<a class="nav-link" href="alumniRegi.php">NEW ALUMNI</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="staffRegi.php">New Staff</a>
+								<a class="nav-link" href="staffRegi.php">NEW STAFF</a>
 							</li>';
 					}
 				?>
+				<?php if(isset($_SESSION["user_email"])) { 
+					echo '
 				<li class="nav-item">
-					<a class="nav-link" href="contact.php">Contact</a>
-				</li>
+					<a class="nav-link" href="fund.php">FUND</a>
+				</li>';} ?>
 				<li class="nav-item">
-					<a class="nav-link" href="fund.php">Fund</a>
+					<a class="nav-link" href="successStories.php">SUCCESS STORIES</a>
 				</li>
 				
 			</ul>

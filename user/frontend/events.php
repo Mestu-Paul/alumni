@@ -4,14 +4,16 @@
 <head>
 	<title>Events</title>
 	<?php include '../../common/headRef.php'; ?>
+	<style>
+	</style>
 </head>
 
 <body>
 	<?php include 'navbar.php'; ?>
 	<?php include '../../common/getEvents.php'; ?>
-	<div class="container bg-light" style="min-height:100vh">
+	<div class="events bg-light" style="min-height:100vh">
 		<div class="mx-auto " style="width: 70%;">
-			<p class="text-center mt-5" style="font-size: 30px; font-weight: bold; color: #fc825a">Events</p>
+			<p class="text-center mt-5" style="font-size: 30px; font-weight: bold; ">Events</p>
 			<p class="text-center">
 				It is important to carry out a good follow-up marketing of alumni events.
 				With over 100 worldwide events in a year, you have a wealth of alumni networking opportunities.
@@ -23,17 +25,17 @@
 				$day = date('d', strtotime($ev['date']));
 				$month = strtoupper(date('F', strtotime($ev['date'])));
 				echo '
-				<div class="row justify-content-between py-3 mt-5" style="background-color: white;">
+				<div class="row justify-content-between py-3 mt-5" style="background-color: #ffffff;">
 					<div class="col my-auto text-center">
 						<span style="font-size: 30px; font-weight: bold; color: #c55e76;">' . $day . '</span> <br>
-						<span style="font-size: 20px; font-weight: bold; color: #fc825a;">' . $month . '</span>
+						<span style="font-size: 20px; font-weight: bold; color: black;">' . $month . '</span>
 					</div>
 					<div class="col my-auto text-start">
 						<span style="font-size: 20px; font-weight: bold;">' . $ev['title'] . '</span> <br>
 						<span style="color: gray;">' . $ev['description'] . '</span>
 					</div>
 					<div class="col m-auto">
-						<button class="btn bg-danger text-light" id="btn' . $ev['id'] . '" onClick="showDetails(' . $ev['id'] . ')">Details</button>
+						<button class="btn bg-info text-light" id="btn' . $ev['id'] . '" onClick="showDetails(' . $ev['id'] . ')">Details</button>
 					</div>
 					<div class="d-none justify-content-center" style="border-top:1px solid black;" id="' . $ev['id'] . '">
 						<table class="mx-auto"">

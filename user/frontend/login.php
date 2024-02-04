@@ -17,7 +17,7 @@
   <div class="container" style="min-height:100vh">
     <div class="py-2 pb-5">
       <div class="card mx-auto mt-5 py-3" style="width:30rem; box-shadow:0px 0px 10px 2px #919191;">
-        <h5 class="card-title text-center" style="font-size: 30px; font-weight: bold; color: #fc825a">Login</h5>
+        <h5 class="card-title text-center" style="font-size: 30px; font-weight: bold; color: black">Login</h5>
 
         <form action="../backend/login.php" method="post" class="mx-auto" style="width: 70%;">
           <div class="mb-3">

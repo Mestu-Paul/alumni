@@ -1,6 +1,6 @@
 <?php
-$student_name = ["student name", "student name", "student name"];
-$student_id = ["student id", "student id", "student id"];
+$student_name = ["Md Abdul Alim", "Nayel Ahmed Samin", "Zarin Hossain Jhuma"];
+$student_id = ["111120032", "111120041", "111120055"];
 ?>
 
 <div class="container-fluid text-center py-2" style="background-color: #3c2020; color:white;">
@@ -14,5 +14,9 @@ $student_id = ["student id", "student id", "student id"];
         </div>';
         }
         ?>
+        <div class="col">
+            <p><a href="../../user/frontend/about.php">About</a></p>
+            <p><a href="../../user/frontend/contact.php">Contact With Us</a></p>
+        </div>
     </div>
 </div>
